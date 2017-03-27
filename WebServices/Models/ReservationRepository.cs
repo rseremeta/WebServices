@@ -13,13 +13,25 @@ namespace WebServices.Models
             }
         }
         private List<Reservation> data = new List<Reservation> {
-new Reservation {
-ReservationId = 1, ClientName = "Adam", Location = "Board Room"},
-new Reservation {
-ReservationId = 2, ClientName = "Jacqui", Location ="Lecture Hall"},
-new Reservation {
-ReservationId = 3, ClientName = "Russell", Location ="Meeting Room 1"},
-};
+                new Reservation()
+                {
+                    ReservationId = 1,
+                    ClientName = "Adam",
+                    Location = "Board Room"
+                },
+                new Reservation
+                {
+                    ReservationId = 2,
+                    ClientName = "Jacqui",
+                    Location ="Lecture Hall"
+                },
+                new Reservation
+                {
+                    ReservationId = 3,
+                    ClientName = "Russell",
+                    Location ="Meeting Room 1"},
+                };
+
         public IEnumerable<Reservation> GetAll()
         {
             return data;
