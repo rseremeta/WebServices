@@ -44,7 +44,7 @@ namespace WebServices.Models
 
         public Reservation Add(Reservation item)
         {
-            item.ReservationId = data.Count + 1;
+            item.ReservationId = data.Count > 0 ? data.Last().ReservationId + 1 : 1;
             data.Add(item);
             return item;
         }
